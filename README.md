@@ -1,2 +1,2 @@
 # MatLabRepository
-It's only for Univ.-ty projects :)
+Uni projects and studying materials
