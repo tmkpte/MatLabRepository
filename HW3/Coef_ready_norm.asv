@@ -1,0 +1,21 @@
+clear all;
+clc;
+
+m1 = 1000; %a
+s1 = 300; %s
+m2 = 200;%b
+s2 = 30;%r
+
+
+syms f_ksi f_eta t arr;
+
+
+arr(1) = 1 - erf((t - m1)/s1);
+
+for i = 2:100
+    arr(i) = erf((t-(i-1)*(m1+m2))/sqrt((i-1)*(s1^2+s2^2))) - erf((t -(i-1)*(m1+m2)  - m1)/sqrt((i-1)*(s1^2+s2^2)+s1^2));
+end
+
+Coef_norm(t) = sum(arr);
+
+
