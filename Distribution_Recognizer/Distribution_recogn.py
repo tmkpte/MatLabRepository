@@ -4,7 +4,7 @@
 # In[1]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+#get_ipython().run_line_magic('matplotlib', 'inline')
 
 import warnings
 import numpy as np
@@ -100,7 +100,8 @@ data = pd.Series(sm.datasets.elnino.load_pandas().data.set_index('YEAR').values.
 
 # normed hist - non
 plt.figure(figsize=(12,8))
-ax = data.plot(kind='hist', bins=50, normed=False, alpha=0.8);
+ax = data.plot(kind='hist', bins=50, alpha=0.8);
+plt.show()
 
 
 # In[10]:
@@ -109,6 +110,7 @@ ax = data.plot(kind='hist', bins=50, normed=False, alpha=0.8);
 # normed hist - True
 plt.figure(figsize=(12,8))
 ax = data.plot(kind='hist', bins=50, normed=True, alpha=0.8);
+plt.show()
 
 
 # In[13]:
@@ -163,7 +165,7 @@ dist_str = '{} ({})'.format(best_fit_name, param_str)
 plt.title('Fitting best distribution: '+dist_str);
 plt.xlabel('X');
 plt.ylabel('Freq/Count');
-
+plt.show()
 
 
 
@@ -171,21 +173,6 @@ plt.ylabel('Freq/Count');
 
 
 
-
-
-# In[17]:
-
-
-
-
-
-# In[18]:
-
-
-
-
-
-# In[19]:
 
 
 
